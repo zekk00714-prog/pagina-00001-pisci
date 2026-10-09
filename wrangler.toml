@@ -2,7 +2,8 @@ name = "piscicor-web"
 compatibility_date = "2026-10-09"
 
 [assets]
-directory = "./"
+directory = "./pagina piscina"
 
 [previews]
+
 
