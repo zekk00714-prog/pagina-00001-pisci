@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pisciCor | Tu Pileta, Nuestro Compromiso - Diseño, Construcción y Mantenimiento</title>
+  <meta name="description" content="pisciCor especialista en diseño, construcción, mantenimiento, limpieza y equipamiento de piletas. Contacta directamente por WhatsApp o llamada al 3543634606 o 3543613121.">
+  
+  <!-- Tipografía Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Iconos RemixIcon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  
+  <!-- Estilos Personalizados Minificados -->
+  <link rel="stylesheet" href="styles.min.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVBAR
+       ========================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Logo Marca -->
+      <a href="#inicio" class="brand-logo">
+        <div class="logo-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <div class="brand-title">pisci<span>Cor</span></div>
+          <div class="brand-slogan">Tu pileta, nuestro compromiso</div>
+        </div>
+      </a>
+
+      <!-- Menú de Navegación -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#cotizador" class="nav-link">Cotizador</a></li>
+        <li><a href="#galeria" class="nav-link">Galería</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <!-- Botones de Acción Directa en Header -->
+      <div class="nav-actions">
+        <button class="btn btn-whatsapp" onclick="openWhatsappModal()">
+          <i class="ri-whatsapp-line"></i> WhatsApp
+        </button>
+        <button class="btn btn-call" onclick="openCallModal()">
+          <i class="ri-phone-line"></i> Llamar
+        </button>
+      </div>
+
+      <!-- Botón Menú Mobile -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-shapes">
+      <div class="bubble bubble-1"></div>
+      <div class="bubble bubble-2"></div>
+      <div class="bubble bubble-3"></div>
+    </div>
+
+    <div class="container hero-grid">
+      <!-- Contenido Principal -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="ri-drop-fill"></i> Especialistas en Piletas & Piscinas
+        </div>
+        <h1 class="hero-title">
+          Tu pileta perfecta, <br>
+          <span class="highlight">nuestro compromiso.</span>
+        </h1>
+        <p class="hero-description">
+          Diseño exclusivo, construcción de alta calidad, equipamiento avanzado y servicios de mantenimiento integral para disfrutar del agua todo el año sin preocupaciones.
+        </p>
+
+        <!-- Botones Interactivos Principales -->
+        <div class="hero-actions">
+          <button class="btn btn-whatsapp btn-lg" onclick="openWhatsappModal('Hola pisciCor, me gustaría consultar por información de sus servicios.')">
+            <i class="ri-whatsapp-line" style="font-size: 1.4rem;"></i> Escribir por WhatsApp
+          </button>
+          <button class="btn btn-call btn-lg" onclick="openCallModal()">
+            <i class="ri-phone-line" style="font-size: 1.3rem;"></i> Llamar Ahora
+          </button>
+        </div>
+
+        <!-- Tira con Números de Teléfono de la Imagen -->
+        <div class="hero-phone-strip">
+          <div class="phone-card-mini" onclick="openWhatsappModal('Consulta a Línea 1 (3543634606)')" style="cursor: pointer;">
+            <div class="phone-icon-box">
+              <i class="ri-phone-fill"></i>
+            </div>
+            <div class="phone-info">
+              <span class="phone-label">Línea Directa 1</span>
+              <span class="phone-number">3543 634606</span>
+            </div>
+          </div>
+
+          <div class="phone-card-mini" onclick="openWhatsappModal('Consulta a Línea 2 (3543613121)')" style="cursor: pointer;">
+            <div class="phone-icon-box">
+              <i class="ri-phone-fill"></i>
+            </div>
+            <div class="phone-info">
+              <span class="phone-label">Línea Directa 2</span>
+              <span class="phone-number">3543 613121</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen Destacada de la Marca -->
+      <div class="hero-media">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-card">
+            <img src="img/piscicor-hero.jpg" alt="Pileta pisciCor de diseño infinito con vista panorámica">
+            <div class="hero-image-overlay">
+              <div class="hero-overlay-title">Diseño Infinito & Panorámico</div>
+              <div class="hero-overlay-sub">Calidad certificada y acabados de lujo</div>
+            </div>
+          </div>
+
+          <div class="floating-experience-badge">
+            <div class="badge-num">100%</div>
+            <div class="badge-txt">Garantía y<br>Confianza</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divisor SVG en forma de Onda Acuática -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+  </div>
+
+  <!-- ==========================================
+       SERVICIOS DESTACADOS (Basados en la imagen)
+       ========================================== -->
+  <section class="services-section" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Nuestra Propuesta de Valor</span>
+        <h2 class="section-title">Servicios Especializados pisciCor</h2>
+        <p class="section-desc">Nos encargamos de todo el ciclo de vida de tu pileta con soluciones integrales y profesionales.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Servicio 1: Diseño y Construcción -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i class="ri-drop-line"></i>
+          </div>
+          <h3 class="service-title">Diseño y Construcción de Piletas</h3>
+          <p class="service-text">
+            Creamos piletas personalizadas de hormigón armado, infinitas, con solárium húmedo y bordes atermicos. Proyectos llave en mano a la medida de tu espacio.
+          </p>
+          <button class="service-btn" onclick="openWhatsappModal('Hola! Quisiera consultar por el diseño y construcción de una pileta.')">
+            Consultar Construcción <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <!-- Servicio 2: Mantenimiento y Limpieza -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i class="ri-tools-line"></i>
+          </div>
+          <h3 class="service-title">Mantenimiento y Limpieza</h3>
+          <p class="service-text">
+            Servicio integral de mantenimiento periódico, balance de agua, filtrado profundo, desinfección y limpieza de fondo para mantener el agua cristalina todo el año.
+          </p>
+          <button class="service-btn" onclick="openWhatsappModal('Hola! Me interesa el servicio de mantenimiento y limpieza de pileta.')">
+            Solicitar Mantenimiento <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <!-- Servicio 3: Equipamiento y Accesorios -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i class="ri-temp-hot-line"></i>
+          </div>
+          <h3 class="service-title">Equipamiento y Accesorios</h3>
+          <p class="service-text">
+            Venta e instalación de bombas, filtros, sistemas de climatización solar o por bomba de calor, luces subacuáticas LED, robot limpiafondos y accesorios.
+          </p>
+          <button class="service-btn" onclick="openWhatsappModal('Hola! Deseo cotizar equipamiento o accesorios para mi pileta.')">
+            Ver Equipamiento <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <!-- Servicio 4: Calidad y Confianza -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i class="ri-shield-check-line"></i>
+          </div>
+          <h3 class="service-title">Calidad y Confianza</h3>
+          <p class="service-text">
+            Respaldamos cada trabajo con garantía por escrito, asesoramiento técnico constante y el mejor compromiso de atención personalizada.
+          </p>
+          <button class="service-btn" onclick="openWhatsappModal('Hola! Me gustaría asesoramiento personalizado con un técnico.')">
+            Hablar con Asesor <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       COTIZADOR / PRESUPUESTO EXPRESS
+       ========================================== -->
+  <section class="quote-section" id="cotizador">
+    <div class="container quote-container">
+      <div class="quote-info">
+        <h2 class="quote-info-title">¿Tenés una idea en mente? Solicita tu Presupuesto Express</h2>
+        <p class="quote-info-desc">
+          Completá las características que buscas para tu pileta y te enviamos una estimación personalizada directamente a tu WhatsApp en pocos minutos.
+        </p>
+
+        <ul class="quote-features-list">
+          <li class="quote-feature-item">
+            <div class="quote-feature-icon"><i class="ri-check-line"></i></div>
+            <span>Atención rápida y asesoramiento sin compromiso</span>
+          </li>
+          <li class="quote-feature-item">
+            <div class="quote-feature-icon"><i class="ri-check-line"></i></div>
+            <span>Atendido por profesionales capacitados</span>
+          </li>
+          <li class="quote-feature-item">
+            <div class="quote-feature-icon"><i class="ri-check-line"></i></div>
+            <span>Respuestas inmediatas a tus 2 líneas de WhatsApp</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Formulario interactivo -->
+      <div class="quote-card">
+        <form id="quoteForm">
+          <!-- Campo Honeypot para Prevención de Bots (Invisible) -->
+          <input type="text" name="b_honeypot" tabindex="-1" autocomplete="off" style="display:none !important;" aria-hidden="true">
+
+          <div class="form-group">
+            <label class="form-label" for="quoteService">¿Qué servicio necesitas?</label>
+            <select id="quoteService" class="form-select" required>
+              <option value="Construcción de Pileta Nueva">Construcción de Pileta Nueva</option>
+              <option value="Mantenimiento y Limpieza">Mantenimiento y Limpieza de Agua</option>
+              <option value="Climatización e Iluminación LED">Climatización / Iluminación LED</option>
+              <option value="Equipamiento (Bombas/Filtros)">Equipamiento (Bombas / Filtros)</option>
+              <option value="Remodelación o Reparación">Remodelación / Reparación</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="quoteSize">Medidas aproximadas de la pileta</label>
+            <select id="quoteSize" class="form-select">
+              <option value="Pequeña (hasta 6x3m)">Pequeña (ej: 6x3 metros)</option>
+              <option value="Mediana (ej: 8x4m)">Mediana (ej: 8x4 metros)</option>
+              <option value="Grande (ej: 10x5m o más)">Grande (ej: 10x5 metros o superior)</option>
+              <option value="Aún no lo he definido">Aún no lo he definido (Asesorar)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="quoteLocation">Ubicación / Ciudad</label>
+            <input type="text" id="quoteLocation" class="form-input" placeholder="Ej: Córdoba, Mendiolaza, Villa Allende, etc.">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="quoteComments">Detalles o consultas adicionales</label>
+            <textarea id="quoteComments" class="form-textarea" rows="2" placeholder="Escribí aquí si querés agregar detalles de tu proyecto..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Enviar consulta al WhatsApp:</label>
+            <div class="phone-select-group">
+              <label class="phone-radio-btn">
+                <input type="radio" name="quotePhone" value="3543634606" checked>
+                <div class="phone-radio-box">
+                  <i class="ri-whatsapp-line"></i> 3543 634606
+                </div>
+              </label>
+
+              <label class="phone-radio-btn">
+                <input type="radio" name="quotePhone" value="3543613121">
+                <div class="phone-radio-box">
+                  <i class="ri-whatsapp-line"></i> 3543 613121
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-whatsapp btn-lg" style="width: 100%; margin-top: 1rem;">
+            <i class="ri-send-plane-fill"></i> Enviar Cotización por WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GALERÍA DE PROYECTOS
+       ========================================== -->
+  <section class="gallery-section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Nuestros Proyectos</span>
+        <h2 class="section-title">Galería de Trabajos pisciCor</h2>
+        <p class="section-desc">Mirá los resultados de nuestras construcciones e instalaciones de alta calidad.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Tarjeta de la Imagen Principal -->
+        <div class="gallery-item" onclick="openGalleryModal('img/piscicor-hero.jpg', 'Pileta Infinita con vista a las sierras')">
+          <img src="img/piscicor-hero.jpg" alt="Proyecto pisciCor Pileta Infinita" loading="lazy" decoding="async">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Diseño Exclusivo</span>
+            <h4 class="gallery-title">Pileta Infinita panorámica</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('img/piscicor-hero.jpg', 'Mantenimiento y Tratamiento Térmico')">
+          <img src="img/piscicor-hero.jpg" alt="Mantenimiento de Piletas" loading="lazy" decoding="async" style="filter: hue-rotate(15deg) brightness(1.05);">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Mantenimiento</span>
+            <h4 class="gallery-title">Agua Cristalina & Filtrado Integral</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('img/piscicor-hero.jpg', 'Equipamiento y Luces Subacuáticas LED')">
+          <img src="img/piscicor-hero.jpg" alt="Equipamiento y Iluminación" loading="lazy" decoding="async" style="filter: saturate(1.3) contrast(1.1);">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Equipamiento</span>
+            <h4 class="gallery-title">Iluminación LED & Climatización</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna Marca -->
+        <div class="footer-brand">
+          <a href="#inicio" class="brand-logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+              </svg>
+            </div>
+            <div class="logo-text-group">
+              <div class="brand-title">pisci<span>Cor</span></div>
+              <div class="brand-slogan">Tu pileta, nuestro compromiso</div>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Empresa especializada en el diseño, construcción, equipamiento y mantenimiento de piletas. Compromiso, calidad y asesoramiento profesional directo.
+          </p>
+        </div>
+
+        <!-- Columna Accesos Rápidos -->
+        <div>
+          <h4 class="footer-heading">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#cotizador">Cotizador Express</a></li>
+            <li><a href="#galeria">Galería</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Servicios -->
+        <div>
+          <h4 class="footer-heading">Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Diseño y Construcción</a></li>
+            <li><a href="#servicios">Mantenimiento y Limpieza</a></li>
+            <li><a href="#servicios">Equipamiento y Accesorios</a></li>
+            <li><a href="#servicios">Asesoría Técnica</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Contacto Directo -->
+        <div>
+          <h4 class="footer-heading">Líneas Directas</h4>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="ri-phone-fill"></i></div>
+            <div>
+              <strong style="color: #fff;">Línea 1:</strong><br>
+              <a href="tel:3543634606" style="color: var(--cyan-glow); font-weight: 700;">3543 634606</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="ri-phone-fill"></i></div>
+            <div>
+              <strong style="color: #fff;">Línea 2:</strong><br>
+              <a href="tel:3543613121" style="color: var(--cyan-glow); font-weight: 700;">3543 613121</a>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.25rem; display: flex; gap: 0.5rem;">
+            <button class="btn btn-whatsapp" onclick="openWhatsappModal()" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+              <i class="ri-whatsapp-line"></i> WhatsApp
+            </button>
+            <button class="btn btn-call" onclick="openCallModal()" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+              <i class="ri-phone-line"></i> Llamar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 pisciCor. Todos los derechos reservados. | Tu pileta, nuestro compromiso.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       WIDGET FLOTANTE DE CONTACTO RÁPIDO
+       ========================================== -->
+  <div class="floating-widget">
+    <div class="widget-menu" id="widgetMenu">
+      <a href="https://wa.me/5493543634606?text=Hola%20pisciCor!%20Me%20contacto%20desde%20la%20web" target="_blank" class="widget-option widget-option-whatsapp">
+        <i class="ri-whatsapp-line" style="color: #25d366; font-size: 1.2rem;"></i> WhatsApp 3543 634606
+      </a>
+      <a href="https://wa.me/5493543613121?text=Hola%20pisciCor!%20Me%20contacto%20desde%20la%20web" target="_blank" class="widget-option widget-option-whatsapp">
+        <i class="ri-whatsapp-line" style="color: #25d366; font-size: 1.2rem;"></i> WhatsApp 3543 613121
+      </a>
+      <a href="javascript:void(0)" onclick="openCallModal()" class="widget-option">
+        <i class="ri-phone-fill" style="color: var(--ocean-blue); font-size: 1.2rem;"></i> Llamada Telefónica
+      </a>
+    </div>
+
+    <button class="widget-trigger" id="widgetTrigger" aria-label="Contacto por WhatsApp o Llamada">
+      <i class="ri-whatsapp-line"></i>
+    </button>
+  </div>
+
+  <!-- ==========================================
+       MODAL DE SELECCIÓN DE WHATSAPP
+       ========================================== -->
+  <div class="modal-backdrop" id="modalWhatsapp">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('modalWhatsapp')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon modal-icon-whatsapp">
+          <i class="ri-whatsapp-line"></i>
+        </div>
+        <h3 class="modal-title">Escribir por WhatsApp</h3>
+        <p class="modal-desc">Seleccioná a cuál de nuestras dos líneas de atención querés comunicarte:</p>
+      </div>
+
+      <div class="modal-options-list">
+        <a href="javascript:void(0)" class="modal-option-card btn-wa-line" data-line="line1">
+          <div class="modal-option-info">
+            <div class="modal-num-badge">1</div>
+            <div class="modal-option-text">
+              <span class="modal-option-name">3543 634606</span>
+              <span class="modal-option-sub">Atención comercial & Consultas</span>
+            </div>
+          </div>
+          <i class="ri-arrow-right-s-line modal-action-arrow"></i>
+        </a>
+
+        <a href="javascript:void(0)" class="modal-option-card btn-wa-line" data-line="line2">
+          <div class="modal-option-info">
+            <div class="modal-num-badge">2</div>
+            <div class="modal-option-text">
+              <span class="modal-option-name">3543 613121</span>
+              <span class="modal-option-sub">Servicios & Mantenimiento</span>
+            </div>
+          </div>
+          <i class="ri-arrow-right-s-line modal-action-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL DE SELECCIÓN DE LLAMADA
+       ========================================== -->
+  <div class="modal-backdrop" id="modalCall">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('modalCall')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon modal-icon-call">
+          <i class="ri-phone-line"></i>
+        </div>
+        <h3 class="modal-title">Llamar a pisciCor</h3>
+        <p class="modal-desc">Elegí la línea a la cual querés hacer tu llamada telefónica:</p>
+      </div>
+
+      <div class="modal-options-list">
+        <a href="javascript:void(0)" class="modal-option-card btn-call-line" data-line="line1">
+          <div class="modal-option-info">
+            <div class="modal-num-badge">1</div>
+            <div class="modal-option-text">
+              <span class="modal-option-name">3543 634606</span>
+              <span class="modal-option-sub">Llamada a Línea Directa 1</span>
+            </div>
+          </div>
+          <i class="ri-phone-fill modal-action-arrow"></i>
+        </a>
+
+        <a href="javascript:void(0)" class="modal-option-card btn-call-line" data-line="line2">
+          <div class="modal-option-info">
+            <div class="modal-num-badge">2</div>
+            <div class="modal-option-text">
+              <span class="modal-option-name">3543 613121</span>
+              <span class="modal-option-sub">Llamada a Línea Directa 2</span>
+            </div>
+          </div>
+          <i class="ri-phone-fill modal-action-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL LIGHTBOX GALERÍA
+       ========================================== -->
+  <div class="modal-backdrop" id="modalGallery">
+    <div class="modal-card" style="max-width: 800px; padding: 1.5rem; text-align: center;">
+      <button class="modal-close" onclick="closeModal('modalGallery')">&times;</button>
+      <h3 id="galleryModalTitle" class="modal-title" style="margin-bottom: 1rem;">Vista Previa del Proyecto</h3>
+      <div style="border-radius: var(--radius-md); overflow: hidden; max-height: 75vh;">
+        <img id="galleryModalImg" src="" alt="Vista previa" style="width: 100%; height: auto; max-height: 70vh; object-fit: contain;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Principal Minificado y Diferido -->
+  <script src="script.min.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# Reglas de Caché y Rendimiento para Cloudflare Pages
+
+# 1. Assets estáticos estables (CSS, JS, Imágenes, Fuentes): Caché inmutable por 1 año
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 2. Documentos HTML principales: Siempre revalidar para garantizar actualizaciones inmediatas
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 3. Encabezados de Seguridad Recomendados para Edge
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
