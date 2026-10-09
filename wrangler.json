@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "piscicor-web",
+  "name": "ancient-cell-0543",
   "compatibility_date": "2026-10-09",
   "assets": {
     "directory": "./pagina piscina"
