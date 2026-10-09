@@ -12,16 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const PHONE_NUMBERS = {
     line1: {
-      raw: '3543634606',
-      formatted: '3543 634606',
-      waUrl: 'https://wa.me/5493543634606',
-      telUrl: 'tel:3543634606'
+      raw: '3543XXXXXX',
+      formatted: '3543 XXXXXX',
+      waUrl: 'https://wa.me/5493543XXXXXX',
+      telUrl: 'tel:3543XXXXXX'
     },
     line2: {
-      raw: '3543613121',
-      formatted: '3543 613121',
-      waUrl: 'https://wa.me/5493543613121',
-      telUrl: 'tel:3543613121'
+      raw: '3543XXXXXX',
+      formatted: '3543 XXXXXX',
+      waUrl: 'https://wa.me/5493543XXXXXX',
+      telUrl: 'tel:3543XXXXXX'
     }
   };
 
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const comments = document.getElementById('quoteComments').value;
       
       const selectedPhoneRadio = document.querySelector('input[name="quotePhone"]:checked');
-      const selectedPhone = selectedPhoneRadio ? selectedPhoneRadio.value : '3543634606';
+      const selectedPhone = selectedPhoneRadio ? selectedPhoneRadio.value : '3543XXXXXX';
 
       let message = `*SOLICITUD DE PRESUPUESTO - PISCICOR*\n\n`;
       message += `🔹 *Servicio requerido:* ${service}\n`;
